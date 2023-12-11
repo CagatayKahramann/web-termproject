@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PopTicket</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="logom.png" type="image/png" />
+    <link rel="icon" href="./images/logom.png" type="image/png" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="navbar">
       <ul class="list">
         <li>
           <h1>
-            <a href="main.html"
-              ><img src="./logom3.png" alt="" class="logo"
-            /></a>
+            <a href="main.html">
+              <img src="./images/logom3.png" alt="" class="logo" />
+            </a>
           </h1>
         </li>
         <li class="categories">
@@ -24,12 +25,12 @@
           <a href="#"><h3>THEATERS</h3></a>
         </li>
       </ul>
-      <div class="navimg">
+      <div class="searchimg">
         <input type="text" id="searchInput" placeholder="Search..." />
-        <img src="./search.png" alt="" class="ni" id="searchIcon" />
+        <img src="./images/search.png" alt="" class="simg" id="searchIcon" />
       </div>
       <div class="login" id="login">
-        <img src="./user3.png" alt="" />
+        <img src="./images/user3.png" alt="" />
         <p>Login/Sign Up</p>
       </div>
     </div>
@@ -47,13 +48,38 @@
           <input type="radio" name="radio-btn" id="radio3" />
 
           <div class="slide first">
-            <img src="movie1.jpg" alt="" />
+            <div class="movietext">
+              <div class="movietitle">
+                <h1>Star Wars: Episode IV - A New Hope</h1>
+              </div>
+              <div class="moviedesc">
+                <p>
+                  Luke Skywalker joins forces with a Jedi Knight, a cocky pilot,
+                  a Wookiee and two droids to save the galaxy from the Empire's
+                  world-destroying battle station, while also attempting to
+                  rescue Princess Leia from the mysterious Darth Vader.
+                </p>
+              </div>
+              <div class="moviedet">
+                <div class="moviedirector">
+                  <p>Director: George Lucas</p>
+                </div>
+                <div class="movietimeandrate">
+                  <h4>Süre: 1 Saat 57dk</h4>
+                  <h4>Derece: 8.5</h4>
+                </div>
+                <div class="movieinspect">
+                  <button>Inspect</button>
+                </div>
+              </div>
+            </div>
+            <img src="./images/movie1.jpg" alt="" />
           </div>
           <div class="slide">
-            <img src="movie2.jpg" alt="" />
+            <img src="./images/movie2.jpg" alt="" />
           </div>
           <div class="slide">
-            <img src="movie3.jpg" alt="" />
+            <img src="./images/movie3.jpg" alt="" />
           </div>
           <div class="navigation-auto">
             <div class="auto-btn1"></div>
@@ -68,40 +94,76 @@
         </div>
       </div>
     </div>
+
     <div class="ontheater">
-      <a href="#carousel_cont" id="ontheater"><h1>On Theaters</h1></a>
+      <h1 id="ontheater">On Theaters</h1>
       <div class="carousel">
         <div class="carousel_container" id="carousel_cont">
           <div class="carousel_item">
-            <img src="smovie11.png" alt="Movie 1" />
+            <img src="./images/smovie11.png" alt="Movie 1" />
           </div>
           <div class="carousel_item">
-            <img src="smovie2.png" alt="Movie 2" />
+            <img src="./images/smovie2.png" alt="Movie 2" />
           </div>
           <div class="carousel_item">
-            <img src="smovie3.png" alt="Movie 3" />
+            <img src="./images/smovie3.png" alt="Movie 3" />
           </div>
           <div class="carousel_item">
-            <img src="smovie4.png" alt="Movie 4" />
+            <img src="./images/smovie4.png" alt="Movie 4" />
           </div>
           <div class="carousel_item">
-            <img src="smovie5.png" alt="Movie 5" />
+            <img src="./images/smovie5.png" alt="Movie 5" />
           </div>
           <div class="carousel_item">
-            <img src="smovie2.png" alt="Movie 6" />
+            <img src="./images/smovie2.png" alt="Movie 6" />
           </div>
         </div>
+
         <button class="carousel_prev" id="carousel_previous_button">
           &lt;
         </button>
         <button class="carousel_next" id="carousel_next_button">&gt;</button>
       </div>
     </div>
+    <!--height da bi sıkıntı olabilir bak-->
+    <div class="upcoming">
+      <h1 id="upcoming">Upcoming Movies</h1>
+      <div class="carousel">
+        <div class="carousel_container" id="upcoming_carousel_cont">
+          <div class="carousel_item">
+            <img src="./images/smovie11.png" alt="Movie 1" />
+          </div>
+          <div class="carousel_item">
+            <img src="./images/smovie2.png" alt="Movie 2" />
+          </div>
+          <div class="carousel_item">
+            <img src="./images/smovie3.png" alt="Movie 3" />
+          </div>
+          <div class="carousel_item">
+            <img src="./images/smovie4.png" alt="Movie 4" />
+          </div>
+          <div class="carousel_item">
+            <img src="./images/smovie5.png" alt="Movie 5" />
+          </div>
+          <div class="carousel_item">
+            <img src="./images/smovie2.png" alt="Movie 6" />
+          </div>
+        </div>
+
+        <button class="carousel_prev" id="upcoming_carousel_previous_button">
+          &lt;
+        </button>
+        <button class="carousel_next" id="upcoming_carousel_next_button">
+          &gt;
+        </button>
+      </div>
+    </div>
+
     <div class="top-button" id="topbutton">
       <div class="up">^</div>
     </div>
     <footer>
-      <img src="./logom3.png" alt="" class="flogo" />
+      <img src="./images/logom3.png" alt="" class="flogo" />
       <div class="footer-container">
         <div class="footer-section">
           <a href="about.html" class="footerlink"><h3>About Us</h3></a>
@@ -114,19 +176,17 @@
           <ul>
             <li><a href="#"></a></li>
             <li>
-              <a href="#"><img src="./fblogo.png" alt="" />Facebook</a>
+              <a href="#"><img src="./images/fblogo.png" alt="" />Facebook</a>
             </li>
             <li>
-              <a href="#"><img src="./iglogo.png" alt="" />Instagram</a>
+              <a href="#"><img src="./images/iglogo.png" alt="" />Instagram</a>
             </li>
             <li>
-              <a href="#"><img src="./x.png" alt="" />Twitter</a>
+              <a href="#"><img src="./images/x.png" alt="" />Twitter</a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>

@@ -17,21 +17,35 @@ setInterval(function () {
 }, 5000);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("carousel_cont");
-  const prevButton = document.getElementById("carousel_previous_button");
-  const nextButton = document.getElementById("carousel_next_button");
+  setupCarousel(
+    "carousel_cont",
+    "carousel_previous_button",
+    "carousel_next_button"
+  );
+  setupCarousel(
+    "upcoming_carousel_cont",
+    "upcoming_carousel_previous_button",
+    "upcoming_carousel_next_button"
+  );
+});
+
+function setupCarousel(containerId, prevButtonId, nextButtonId) {
+  const container = document.getElementById(containerId);
+  const prevButton = document.getElementById(prevButtonId);
+  const nextButton = document.getElementById(nextButtonId);
   let currentTransform = 0;
 
   prevButton.addEventListener("click", function () {
-    currentTransform += 300;
+    currentTransform = Math.min(currentTransform + 300, 0); // To prevent scrolling too far left
     container.style.transform = `translateX(${currentTransform}px)`;
   });
 
   nextButton.addEventListener("click", function () {
-    currentTransform -= 300;
+    const maxTransform = -(container.scrollWidth - container.clientWidth); // To prevent scrolling too far right
+    currentTransform = Math.max(currentTransform - 300, maxTransform);
     container.style.transform = `translateX(${currentTransform}px)`;
   });
-});
+}
 
 document.getElementById("ontheater").addEventListener("click", function (e) {
   e.preventDefault();
@@ -87,6 +101,9 @@ window.addEventListener("scroll", function () {
   if (window.scrollY > 300) {
     topButton.style.visibility = "visible";
     topButton.style.opacity = "1";
+  } else {
+    topButton.style.visibility = "hidden";
+    topButton.style.opacity = "0";
   }
 });
 
