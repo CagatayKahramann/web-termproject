@@ -9,14 +9,17 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(28, 28, 28, 1));
   height: 100%;
 }
+a {
+  text-decoration: none;
+}
 
 .navbar {
   display: flex;
   position: sticky;
   top: 0;
-  z-index: 100;
-
+  z-index: 10000;
   height: 80px;
+  background: black;
 }
 .navbar li h1 {
   margin-top: 20px;
@@ -703,7 +706,8 @@ footer .flogo {
 }
 
 .custom-select-options li:hover {
-  background-color: #1e90ff; /* Hover state background color */
+  background-color: rgb(255, 217, 0); /* Hover state background color */
+  color: black;
 }
 
 .custom-select {
@@ -745,14 +749,16 @@ footer .flogo {
   overflow: hidden; /* Ensures nothing spills outside the banner */ /* Transparent border to keep layout consistent */
   transition: 0.3s ease; /* Smooth transition for the border */
 }
+
+.movie-banner-img {
+  position: relative;
+  cursor: pointer;
+}
 .movie-banner img {
   width: 100%;
   height: auto;
   display: block;
-}
-.movie-banner img:hover {
-  filter: brightness(0.8);
-  cursor: pointer;
+  border-radius: 10px;
 }
 
 .movie-banner-details {
@@ -760,4 +766,140 @@ footer .flogo {
   text-align: center;
   line-height: 23px;
   padding: 5px;
+}
+
+.movie-banner-img-hover {
+  position: absolute;
+  width: 100%; /* Ensure it covers the banner */
+  height: 100%; /* Ensure it covers the banner */
+  top: 0;
+  left: 0;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center the content */
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(rgba(255, 217, 0, 0.6), rgba(1, 1, 1, 0.7));
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.movie-banner-img-hover .bannerimdb {
+  position: absolute;
+  color: white;
+  top: 8px;
+  right: 8px;
+}
+.movie-banner-img:hover .movie-banner-img-hover {
+  display: block;
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+}
+
+.movie-banner-img-hover .bannerbutton {
+  position: absolute;
+  bottom: 8px;
+  left: 14px;
+  border: 1px solid rgb(95, 95, 95);
+  height: 32px;
+  width: 90%;
+  border-radius: 30px;
+  transition: 0.15s;
+  background: rgb(95, 95, 95, 0.15);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.movie-banner-img-hover .inspectbutton:hover {
+  background: rgb(95, 95, 95, 0.5);
+}
+.movie-banner-img-hover .buybutton {
+  background: rgb(255, 208, 0);
+  color: black;
+}
+.movie-banner-img-hover .buybutton:hover {
+  filter: brightness(0.8);
+}
+.textarea a {
+  font-size: 30px;
+}
+.textarea .active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+.movie-banner-img-hover .buybutton {
+  bottom: 48px;
+}
+
+.inspect-page {
+  display: flex;
+  flex-direction: column;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.movie-info {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 7.5vh;
+  color: white;
+}
+
+.movie-info-img img {
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+.movie-info-text {
+  width: fit-content;
+  padding: 8px;
+  position: relative;
+  margin-left: 16px;
+}
+
+.movie-info-text .movie-title {
+  font-size: 32px;
+  width: fit-content;
+  margin-bottom: 52px;
+}
+.movie-info-text .movie-title .title-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.movie-info-detail {
+  margin-bottom: 200px;
+  line-height: 20px;
+  opacity: 0.85;
+}
+.movie-info-desc {
+  width: 480px;
+  opacity: 0.85;
+}
+.movie-info-button {
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+}
+.movie-info-button button {
+  border: 1px solid rgb(95, 95, 95);
+  height: 56px;
+  width: 300px;
+  border-radius: 30px;
+  background: rgb(95, 95, 95, 0.15);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.movie-info-button button:hover {
+  background: rgb(255, 208, 0);
+  color: black;
 }

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PopTicket | Movies</title>
+    <title>PopTicket | Upcoming Movies</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./images/logom.png" type="image/png" />
-    <script src="script.js" defer></script>
+    <script src="scriptupcoming.js" defer></script>
   </head>
   <body>
     <div class="navbar">
@@ -19,7 +19,7 @@
           </h1>
         </li>
         <li class="categories">
-          <a href="movies.html"><h3>MOVIES</h3> </a>
+          <a href="ontheaters.html"><h3>MOVIES</h3> </a>
         </li>
         <li class="categories">
           <a href="#"><h3>THEATERS</h3></a>
@@ -30,8 +30,8 @@
       <div class="moviespage">
         <div class="moviespageheader">
           <div class="textarea">
-            <a href="#">On Theaters</a>
-            <a href="#">Upcoming</a>
+            <a href="ontheaters.html">On Theaters</a>
+            <a href="upcoming.html" class="active">Upcoming</a>
           </div>
           <div class="orderarea">
             <div
@@ -39,7 +39,9 @@
               onclick="toggleCustomSelect(this)"
             >
               <div class="custom-select-visible">
-                <span class="custom-select-placeholder">Select an option</span>
+                <span class="custom-select-placeholder" id="custom-placeholder"
+                  >Select an option</span
+                >
                 <span class="custom-select-arrow">▼</span>
               </div>
               <ul class="custom-select-options hidden">
@@ -69,8 +71,12 @@
                   alt="Movie Title 2"
                   class="movie-image"
                 />
+                <div class="movie-banner-img-hover">
+                  <p class="bannerimdb">IMDB: 6.1</p>
+                  <button class="bannerbutton">Inspect</button>
+                </div>
               </div>
-              <div class="movie-banner-img-hover"></div>
+
               <div class="movie-banner-details">
                 <h3>Oppenheimer</h3>
                 <p>1 sa 54dk</p>
@@ -216,6 +222,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="top-button" id="topbutton">
+      <div class="up">^</div>
     </div>
     <footer>
       <img src="./images/logom3.png" alt="" class="flogo" />
