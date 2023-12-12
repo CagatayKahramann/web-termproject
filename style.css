@@ -414,7 +414,7 @@ ul .categories a:hover {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  height: 54.8vh;
+  height: 57vh;
   margin-top: 188px;
 }
 
@@ -465,8 +465,7 @@ ul .categories a:hover {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  height: 74vh;
-
+  height: 76.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -546,6 +545,7 @@ footer {
   background-color: black;
   color: white;
   padding: 20px 0;
+  position: relative;
 }
 
 .footer-container {
@@ -616,4 +616,148 @@ footer .flogo {
 /* This styles the scrollbar track */
 ::-webkit-scrollbar-track {
   background: black;
+}
+
+.content-wrapper {
+  min-height: calc(
+    100vh - 160px
+  ); /* Adjust 160px to match your footer height */
+  /* Rest of your styles */
+}
+
+.moviespage {
+  display: flex;
+  flex-direction: column;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.moviespageheader {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.moviespageheader .textarea {
+  display: flex;
+  padding-top: 16px;
+  gap: 26px;
+  width: 100%;
+  margin-bottom: 0;
+  position: relative;
+}
+.textarea a {
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  line-height: 38px;
+  border-bottom: 4px solid transparent;
+  position: relative;
+  text-decoration: none;
+}
+.orderarea {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  user-select: none;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-visible {
+  padding: 10px;
+  background-color: #333; /* Background color of the visible part */
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-select-arrow {
+  pointer-events: none;
+}
+
+.custom-select-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  z-index: 1000;
+  display: none;
+}
+
+.custom-select-options li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: #333; /* Background color of the dropdown */
+}
+
+.custom-select-options li:hover {
+  background-color: #1e90ff; /* Hover state background color */
+}
+
+.custom-select {
+  display: none; /* Hide the original select dropdown */
+}
+.custom-select-options:not(.hidden) {
+  display: block; /* Show when 'hidden' class is not applied */
+}
+.movieslist {
+  padding: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movieslist {
+  display: flex; /* Adjust if you want a different layout */
+  /* Centers the movie list */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* Assuming a dark background */
+}
+
+.movieslistrow {
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Space between movie banners */
+  justify-content: flex-start; /* Align items to the start of the container */
+  margin-bottom: 20px; /* Space at the bottom of the container */
+}
+
+.movie-banner {
+  flex: 0 0 auto; /* Do not grow or shrink, but be automatically sized by content */
+  width: 280px; /* Assuming 5 items per row, adjust for the gap */
+  margin-bottom: 20px; /* Space at the bottom of each movie-banner */
+  position: relative; /* Needed for absolute positioning of children */
+  /* Adjust based on your image size */
+  height: auto; /* Adjust based on your image size */
+  overflow: hidden; /* Ensures nothing spills outside the banner */ /* Transparent border to keep layout consistent */
+  transition: 0.3s ease; /* Smooth transition for the border */
+}
+.movie-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.movie-banner img:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.movie-banner-details {
+  color: white;
+  text-align: center;
+  line-height: 23px;
+  padding: 5px;
 }
