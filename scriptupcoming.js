@@ -1,11 +1,18 @@
+document.querySelectorAll('.custom-select-wrapper').forEach(function(wrapper) {
+  const visiblePart = wrapper.querySelector('.custom-select-visible');
+  visiblePart.addEventListener('click', function() {
+      toggleCustomSelect(wrapper);
+  });
+});
+
 function toggleCustomSelect(wrapper) {
   const optionsList = wrapper.querySelector(".custom-select-options");
   optionsList.classList.toggle("hidden");
 }
-document
-  .querySelectorAll(".custom-select-options li")
-  .forEach(function (option) {
-    option.addEventListener("click", function () {
+
+document.querySelectorAll(".custom-select-options li").forEach(function (option) {
+  option.addEventListener("click", function () {
+
       const wrapper = this.closest(".custom-select-wrapper");
       const text = this.textContent;
       const value = this.getAttribute("data-value");
@@ -29,32 +36,32 @@ document
 
 // Close the custom select options if clicking outside of the select
 window.addEventListener("click", function (event) {
-  if (!event.target.matches(".custom-select-visible")) {
-    document
-      .querySelectorAll(".custom-select-options")
-      .forEach(function (optionsList) {
-        optionsList.classList.add("hidden");
-      });
+  if (!event.target.closest(".custom-select-wrapper")) {
+    document.querySelectorAll(".custom-select-options").forEach(function (optionsList) {
+      optionsList.classList.add("hidden");
+    });
   }
 });
 
-let topButton = document.getElementById("topbutton");
+// Return to top button
+let topButton = document.getElementById("top-button");
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    topButton.style.visibility = "visible";
-    topButton.style.opacity = "1";
+  if (window.scrollY > 320) {
+    topButton.classList.add("show");
   } else {
-    topButton.style.visibility = "hidden";
-    topButton.style.opacity = "0";
+    topButton.classList.remove("show");
   }
 });
 
 topButton.addEventListener("click", function () {
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
   topButton.classList.add("active");
+
   setTimeout(function () {
     topButton.classList.remove("active");
-    topButton.style.visibility = "hidden";
-    topButton.style.opacity = "0";
   }, 300);
 });

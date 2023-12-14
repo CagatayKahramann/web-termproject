@@ -12,7 +12,6 @@ function setRadioInterval() {
 }
 
 setRadioInterval();
-
 document
   .querySelectorAll(".navigation-manual .manual-btn")
   .forEach(function (btn, index) {
@@ -22,6 +21,7 @@ document
       setTimeout(setRadioInterval, 5000);
     });
   });
+
 document.addEventListener("DOMContentLoaded", function () {
   setupCarousel(
     "carousel_cont",
@@ -42,13 +42,13 @@ function setupCarousel(containerId, prevButtonId, nextButtonId) {
   let currentTransform = 0;
 
   prevButton.addEventListener("click", function () {
-    currentTransform = Math.min(currentTransform + 300, 0); // To prevent scrolling too far left
+    currentTransform = Math.min(currentTransform + 330, 0); // To prevent scrolling too far left
     container.style.transform = `translateX(${currentTransform}px)`;
   });
 
   nextButton.addEventListener("click", function () {
     const maxTransform = -(container.scrollWidth - container.clientWidth); // To prevent scrolling too far right
-    currentTransform = Math.max(currentTransform - 300, maxTransform);
+    currentTransform = Math.max(currentTransform - 330, maxTransform);
     container.style.transform = `translateX(${currentTransform}px)`;
   });
 }
@@ -94,40 +94,26 @@ closeButton.addEventListener("click", function () {
   loginContainer.style.opacity = "0";
   document.body.classList.remove("body-blur");
 });
-let topButton = document.getElementById("topbutton");
+
+// Return to top button
+let topButton = document.getElementById("top-button");
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    topButton.style.visibility = "visible";
-    topButton.style.opacity = "1";
+  if (window.scrollY > 320) {
+    topButton.classList.add("show");
   } else {
-    topButton.style.visibility = "hidden";
-    topButton.style.opacity = "0";
+    topButton.classList.remove("show");
   }
 });
 
 topButton.addEventListener("click", function () {
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
   topButton.classList.add("active");
+
   setTimeout(function () {
     topButton.classList.remove("active");
-    topButton.style.visibility = "hidden";
-    topButton.style.opacity = "0";
   }, 300);
-});
-
-// This function is called when the custom dropdown is clicked
-function toggleCustomSelect(wrapper) {
-  // This line toggles the visibility of the dropdown options
-  wrapper.querySelector(".custom-select-options").classList.toggle("hidden");
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Toggles the custom select options
-  document
-    .querySelectorAll(".custom-select-visible")
-    .forEach(function (select) {
-      select.addEventListener("click", function () {
-        this.nextElementSibling.classList.toggle("hidden"); // This assumes that the ul element is right after the div
-      });
-    });
 });

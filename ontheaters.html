@@ -34,10 +34,7 @@
             <a href="upcoming.html">Upcoming</a>
           </div>
           <div class="orderarea">
-            <div
-              class="custom-select-wrapper"
-              onclick="toggleCustomSelect(this)"
-            >
+            <div class="custom-select-wrapper">
               <div class="custom-select-visible">
                 <span class="custom-select-placeholder" id="custom-placeholder"
                   >Select an option</span
@@ -45,9 +42,9 @@
                 <span class="custom-select-arrow">▼</span>
               </div>
               <ul class="custom-select-options hidden">
-                <li data-value="smart">Akıllı Sıralama</li>
-                <li data-value="date">Vizyon Tarihine Göre</li>
-                <li data-value="rating">Puana Göre</li>
+                <li data-value="smart">Smart Order</li>
+                <li data-value="date">Order by Date</li>
+                <li data-value="rating">Order by IMDB</li>
               </ul>
               <select
                 class="custom-select"
@@ -55,9 +52,9 @@
                 tabindex="-1"
                 aria-hidden="true"
               >
-                <option value="smart">Akıllı Sıralama</option>
-                <option value="date">Vizyon Tarihine Göre</option>
-                <option value="rating">Puana Göre</option>
+                <option value="smart">Smart Order</option>
+                <option value="date">Order by Date</option>
+                <option value="rating">Order by IMDB</option>
               </select>
             </div>
           </div>
@@ -224,8 +221,8 @@
         </div>
       </div>
     </div>
-    <div class="top-button" id="topbutton">
-      <div class="up">^</div>
+    <div class="top-button" id="top-button">
+      <div id="up">^</div>
     </div>
     <footer>
       <img src="./images/logom3.png" alt="" class="flogo" />
