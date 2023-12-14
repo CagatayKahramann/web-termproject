@@ -708,6 +708,9 @@ footer .flogo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .custom-select-arrow {
@@ -952,34 +955,79 @@ footer .flogo {
   display: flex;
   flex: 1;
   color: white;
-  background: purple;
   justify-content: space-between;
   margin-top: 16px;
   margin-bottom: 32px;
 }
 .buy-info-theater-select {
-  width: 35%;
-  background: orange;
-  padding: 8px;
+  width: 30%;
+  background: rgba(28, 28, 28, 1);
+  padding: 8px 12px;
   border: 2px solid rgba(0, 0, 0, 1);
   border-radius: 10px;
+  padding-bottom: 16px;
 }
 .buy-info-dateandtime-select {
-  width: 35%;
-  background: rgb(0, 204, 255);
-  padding: 8px;
-  border: 2px solid rgba(0, 0, 0, 1);
+  width: 30%;
+  background: rgba(28, 28, 28, 1);
+  padding: 8px 12px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  padding-bottom: 16px;
+  color: black;
+}
+.buy-info-ticket-select {
+  width: 30%;
+  background: rgba(28, 28, 28, 1);
+  padding: 8px 12px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding-bottom: 16px;
+  color: black;
+  height: fit-content;
+}
+.ticket-select-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: 16px;
+  align-items: center;
+  color: white;
+  height: 38px;
+}
+.buy-info-ticket-container {
+  border-radius: 10px;
+  height: 64px;
+  line-height: 18px;
+  padding: 8px 0;
+  padding-left: 6px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.buy-info-ticket-pricing {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.buy-info-ticket-count {
+  display: flex;
+  margin-left: 30px;
 }
 .theater-select-header {
   display: flex;
   justify-content: space-between;
   padding-left: 4px;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 .theater-select-container {
-  background: gray;
   border-radius: 10px;
   height: 64px;
   line-height: 18px;
@@ -987,10 +1035,11 @@ footer .flogo {
   padding-left: 6px;
   margin-bottom: 18px;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
 }
 
 .theater-select {
-  background: blue;
   height: 392px; /* Adjust the height to fit in your design */
   overflow-y: auto; /* Enable vertical scrolling */
   border-radius: 10px;
@@ -1004,11 +1053,14 @@ footer .flogo {
 }
 
 .dateandtime-select-title {
+  display: flex;
   padding-left: 4px;
   margin-bottom: 16px;
+  align-items: center;
+  height: 38px;
+  color: white;
 }
 .buy-info-date-select {
-  background: blue;
   height: 392px; /* Adjust the height to fit in your design */
   overflow-y: auto; /* Enable vertical scrolling */
   border-radius: 10px;
@@ -1019,7 +1071,6 @@ footer .flogo {
   margin-right: 24px;
 }
 .date-container {
-  background: gray;
   border-radius: 10px;
   height: 64px;
   line-height: 18px;
@@ -1030,25 +1081,28 @@ footer .flogo {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.9);
 }
 /* For Webkit browsers like Chrome and Safari */
 .buy-info-date-select::-webkit-scrollbar {
   display: none;
 }
 .buy-info-time-select {
-  background: red;
   height: 392px; /* Adjust the height to fit in your design */
   overflow-y: auto; /* Enable vertical scrolling */
   border-radius: 10px;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  border-left: 2px solid white;
+  padding-left: 24px;
+  border-radius: 0;
 }
 /* For Webkit browsers like Chrome and Safari */
 .buy-info-time-select::-webkit-scrollbar {
   display: none;
 }
 .time-container {
-  background: gray;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   height: 64px;
   line-height: 18px;
@@ -1059,4 +1113,47 @@ footer .flogo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.city-select {
+  padding: 10px 38px 10px 10px; /* Padding for text and arrow */
+  border: none; /* Remove default border */
+  -webkit-appearance: none; /* Remove default arrow in webkit browsers */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Remove default arrow in standard browsers */
+  background-color: #333; /* Background color of the select */
+  color: white; /* Text color of the select */
+  border-radius: 0; /* Optional: if you want rounded corners */
+  cursor: pointer;
+  width: 30%;
+}
+
+.buy-info-ticket-count {
+  display: flex; /* Aligns the children horizontally */
+  background: #cacaca; /* Light grey background */
+  border-radius: 20px; /* Rounded corners */
+  width: 120px; /* Width of the entire counter component */
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically */
+}
+
+.buy-info-ticket-count-button {
+  background: #ffffff; /* White background */
+  border: none; /* Removes border */
+  border-radius: 50%; /* Circular shape */
+  width: 30px; /* Width of the buttons */
+  height: 30px; /* Height of the buttons */
+  cursor: pointer; /* Cursor indicates clickable items */
+  margin: 5px; /* Space around the buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  font-size: 20px; /* Increase the size of the plus/minus signs */
+}
+
+#buy-info-ticket-count-value-sta,
+#buy-info-ticket-count-value-stu {
+  padding: 5px 10px; /* Padding inside the number display */
+  background: #cacaca; /* White background */
+  margin: 0 5px; /* Space around the number display */
+  border-radius: 10px; /* Slightly rounded corners for the number display */
+  user-select: none; /* Prevents the text from being selectable */
 }

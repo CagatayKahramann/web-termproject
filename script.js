@@ -1,12 +1,27 @@
 var counter = 1;
-setInterval(function () {
-  document.getElementById("radio" + counter).checked = true;
-  counter++;
-  if (counter > 3) {
-    counter = 1;
-  }
-}, 5000);
+var interval;
 
+function setRadioInterval() {
+  interval = setInterval(function () {
+    document.getElementById("radio" + counter).checked = true;
+    counter++;
+    if (counter > 3) {
+      counter = 1;
+    }
+  }, 5000);
+}
+
+setRadioInterval();
+
+document
+  .querySelectorAll(".navigation-manual .manual-btn")
+  .forEach(function (btn, index) {
+    btn.addEventListener("click", function () {
+      clearInterval(interval);
+      counter = index + 1;
+      setTimeout(setRadioInterval, 5000);
+    });
+  });
 document.addEventListener("DOMContentLoaded", function () {
   setupCarousel(
     "carousel_cont",
@@ -38,15 +53,6 @@ function setupCarousel(containerId, prevButtonId, nextButtonId) {
   });
 }
 
-document.getElementById("ontheater").addEventListener("click", function (e) {
-  e.preventDefault();
-  var targetelement = document.querySelector(this.getAttribute("href"));
-
-  if (targetelement) {
-    targetelement.scrollIntoView({ behavior: "smooth" });
-  }
-});
-
 const searchIcon = document.getElementById("searchIcon");
 const searchInput = document.getElementById("searchInput");
 
@@ -67,6 +73,7 @@ searchInput.addEventListener("blur", function () {
 });
 
 let loginButton = document.getElementById("login");
+
 document.addEventListener("DOMContentLoaded", function () {
   var loginContainer = document.getElementById("logincontainer");
   if (loginContainer) {
