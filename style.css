@@ -173,16 +173,33 @@ ul .categories a {
   color: white;
   text-align: center;
 }
+.register-form {
+  color: white;
+  text-align: center;
+  display: none;
+}
 
 .login-form h1 {
   margin-bottom: 20px;
   font-size: 24px;
   color: white;
 }
-
+.register-form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
 .form-group {
   text-align: left;
   margin-bottom: 16px;
+}
+.form-name-surname {
+  display: flex;
+  justify-content: space-between;
+}
+.register-name-input,
+.register-surname-input {
+  width: 48%;
 }
 
 .form-group input {
@@ -227,7 +244,8 @@ ul .categories a {
 }
 
 /* Hover and focus states for buttons */
-.btn-login:hover, .btn-signup:hover {
+.btn-login:hover,
+.btn-signup:hover {
   filter: brightness(0.8);
 }
 
@@ -261,7 +279,7 @@ ul .categories a {
   color: #8b8b8b;
   top: 24px;
   right: 20px;
-  font-size: 20px; 
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -531,7 +549,7 @@ ul .categories a:hover {
   background-color: transparent;
   width: 32px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 9;
   color: white;
   border: none;
   transition: 0.2s;
@@ -675,7 +693,8 @@ ul .categories a:hover {
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.3s;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+    transform 0.3s;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -1315,12 +1334,11 @@ footer .flogo {
   display: flex;
   align-items: center; /* Align button to the center of the flex container */
   margin-top: 20px; /* Space between the ticket select section and the button */
-  width: 100%;
   justify-content: center;
 }
 
 /* Ensure that the button does not stretch full width if that's not desired */
-.ticket-confirmation button {
+.ticket-confirmation a button {
   border: 1px solid rgb(95, 95, 95);
   height: 64px;
   width: 90%;
@@ -1333,9 +1351,96 @@ footer .flogo {
   font-size: 16px;
   position: absolute;
   bottom: 0;
+  left: 5%;
 }
 
-.ticket-confirmation button:hover {
+.ticket-confirmation a button:hover {
   background: rgb(255, 208, 0);
   color: black;
+}
+.payment-form {
+  color: white;
+  text-align: left;
+  width: 60%;
+}
+.payment-page {
+  display: flex;
+  padding-left: 64px;
+  padding-right: 64px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+.content-wrapper-payment {
+  min-height: calc(100vh - 420px);
+}
+.credit-card-preview {
+  height: 200px;
+  justify-content: space-between;
+  border-radius: 10px;
+  display: flex;
+  width: 800px;
+}
+.monthandyear {
+  display: flex;
+  justify-content: space-between;
+}
+.credit-card-front-preview img,
+.credit-card-back-preview img {
+  border-radius: 10px;
+  width: 360px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.credit-card-front-preview,
+.credit-card-back-preview {
+  position: relative;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#card-front-text1 {
+  position: absolute;
+  top: 60%;
+  left: 11%;
+}
+#card-front-text2 {
+  position: absolute;
+  top: 80%;
+  left: 32%;
+}
+#card-front-text3 {
+  position: absolute;
+  top: 95%;
+  left: 11%;
+}
+#card-back-text {
+  position: absolute;
+  top: 55%;
+  right: 21%;
+}
+.month,
+.year,
+.cvv {
+  width: 32%;
+}
+.payment-form h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+}
+.btn-confirm-payment {
+  width: 40%;
+  height: 36px;
+  border-radius: 30px;
+  transition: 0.15s;
+  background: rgb(255, 217, 0);
+  border: 1px solid rgb(95, 95, 95, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+  cursor: pointer;
+}
+
+/* Hover and focus states for buttons */
+
+.btn-confirm-payment:hover {
+  filter: brightness(0.8);
 }

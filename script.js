@@ -86,6 +86,8 @@ loginButton.addEventListener("click", function () {
   loginContainer.style.visibility = "visible";
   loginContainer.style.opacity = "1";
   document.body.classList.add("body-blur");
+  login_form.style.display = "block";
+  register_form.style.display = "none";
 });
 
 let closeButton = document.getElementById("closebutton");
@@ -108,7 +110,7 @@ window.addEventListener("scroll", function () {
 topButton.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 
   topButton.classList.add("active");
@@ -116,4 +118,12 @@ topButton.addEventListener("click", function () {
   setTimeout(function () {
     topButton.classList.remove("active");
   }, 300);
+});
+
+let signup_button = document.getElementById("sign-up-button");
+let login_form = document.getElementById("login-form");
+let register_form = document.getElementById("register-form");
+signup_button.addEventListener("click", function () {
+  login_form.style.display = "none";
+  register_form.style.display = "block";
 });

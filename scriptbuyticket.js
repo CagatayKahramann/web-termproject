@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Scroll 100 pixels from the top, replace 100 with your desired scroll position
+  window.scrollTo({ top: 300, behavior: "smooth" });
+});
+
 document.querySelectorAll(".custom-select-wrapper").forEach(function (wrapper) {
   const visiblePart = wrapper.querySelector(".custom-select-visible");
   visiblePart.addEventListener("click", function () {

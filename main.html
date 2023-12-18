@@ -36,20 +36,72 @@
     </div>
     <div class="login_container" id="logincontainer">
       <div class="close-button" id="closebutton">X</div>
-      <div class="login-form">
+      <div class="login-form" id="login-form">
         <form action="" method="post">
           <h1>Login</h1>
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Username" required/>
+            <input type="text" id="username" placeholder="Username" required />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" required/>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
           </div>
           <div class="form-actions">
             <button type="submit" class="btn-login">Log In</button>
-            <a href="buyticket.html"><button type="button" class="btn-signup">Sign Up</button></a>
+            <button type="button" class="btn-signup" id="sign-up-button">
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="register-form" id="register-form">
+        <form action="" method="post">
+          <h1>Register</h1>
+          <div class="form-group form-name-surname">
+            <div class="register-name-input">
+              <label for="name">Name </label>
+              <input type="text" id="reg-name" placeholder="Name" required />
+            </div>
+            <div class="register-surname-input">
+              <label for="surname">Surname </label>
+              <input
+                type="text"
+                id="reg-surname"
+                placeholder="Surname"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="reg-username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="reg-email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="reg-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-signup">Sign Up</button>
           </div>
         </form>
       </div>
@@ -144,7 +196,7 @@
         <button class="carousel_next" id="carousel_next_button">&gt;</button>
       </div>
     </div>
-    <!--height da bi sıkıntı olabilir bak-->
+
     <div class="upcoming">
       <a href="upcoming.html" class="carousel-text">Upcoming Movies</a>
       <div class="carousel">
