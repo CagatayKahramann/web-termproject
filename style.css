@@ -5,10 +5,12 @@
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(28, 28, 28, 1));
   height: 100%;
 }
+
 a {
   text-decoration: none;
 }
@@ -21,14 +23,17 @@ a {
   height: 80px;
   background: black;
 }
+
 .navbar li h1 {
   margin-top: 20px;
   margin-left: 40px;
   margin-right: 80px;
 }
+
 .navbar .list {
   display: flex;
 }
+
 .navbar .logo {
   width: 60px;
   height: auto;
@@ -45,6 +50,7 @@ ul a {
   text-decoration: none;
   color: #ffffff;
 }
+
 ul .categories {
   margin-top: 30px;
   margin-right: 50px;
@@ -54,6 +60,7 @@ ul .categories a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 .searchimg {
   display: flex;
   margin-left: 60.3%;
@@ -61,6 +68,7 @@ ul .categories a {
   position: relative;
   align-items: center;
 }
+
 .simg {
   width: 35px;
   height: 35px;
@@ -92,6 +100,7 @@ ul .categories a {
   height: 32px;
   border: none;
 }
+
 #searchInput.visible {
   visibility: visible;
   opacity: 1;
@@ -110,6 +119,7 @@ ul .categories a {
   border-radius: 30px;
   transition: 0.15s;
 }
+
 .login:hover {
   background: rgb(95, 95, 95);
   cursor: pointer;
@@ -119,10 +129,12 @@ ul .categories a {
   height: 35px;
   margin-top: 5px;
 }
+
 .login p {
   color: white;
   margin-top: 15px;
 }
+
 .login_container {
   position: fixed;
   top: 50%;
@@ -145,6 +157,7 @@ ul .categories a {
   overflow: hidden;
   position: relative;
 }
+
 .body-blur::after {
   content: "";
   position: fixed;
@@ -155,10 +168,12 @@ ul .categories a {
   z-index: 9;
   backdrop-filter: blur(5px);
 }
+
 .login-inputs {
   color: white;
   text-align: center;
 }
+
 .close-button {
   color: #8b8b8b;
   float: right;
@@ -166,9 +181,11 @@ ul .categories a {
   cursor: pointer;
   transition: 0.2s;
 }
+
 .close-button:hover {
   filter: brightness(0.5);
 }
+
 ul .categories a:hover {
   filter: brightness(0.8);
 }
@@ -178,12 +195,14 @@ ul .categories a:hover {
   justify-content: center;
   align-items: center;
 }
+
 .slider {
   width: 1820px;
   height: 800px;
   position: relative;
   overflow: hidden;
 }
+
 .slider::before,
 .slider::after {
   content: "";
@@ -192,6 +211,7 @@ ul .categories a:hover {
   bottom: 0;
   z-index: 2;
 }
+
 .slider::before {
   left: 0;
   width: 20px; /* Width of the left fade effect */
@@ -357,13 +377,13 @@ ul .categories a:hover {
   display: flex;
   transition: transform 0.5s ease;
   flex-wrap: nowrap;
+  margin-top: 20px;
 }
 
 .carousel_item {
   position: relative;
   min-width: 20%;
   margin-right: 10px;
-  margin-top: 20px;
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
@@ -408,17 +428,16 @@ ul .categories a:hover {
 .carousel_prev,
 .carousel_next {
   position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
+  top: 20px;
   background-color: transparent;
-  padding: 10px;
+  width: 32px;
   cursor: pointer;
   z-index: 10;
   color: white;
   border: none;
   transition: 0.2s;
   font-weight: bold;
-  height: 96.2%;
+  height: calc(100% - 20px);
   transition: 0.25s;
   opacity: 50%;
   font-size: 24px;
@@ -426,7 +445,7 @@ ul .categories a:hover {
 
 .carousel_prev:hover,
 .carousel_next:hover {
-  background: rgba(19, 19, 19, 0.603);
+  background: rgba(19, 19, 19, 0.6);
   opacity: 0.75;
   color: white;
   font-size: 32px;
@@ -542,35 +561,47 @@ ul .categories a:hover {
   margin: 0;
   font-size: 15.5px;
 }
-.top-button {
+
+#top-button {
   position: fixed;
-  top: 95%;
-  left: 97.5%;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(rgba(0, 0, 0, 1) 55%, rgba(28, 28, 28, 1) 100%);
-  z-index: 10;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  bottom: 16px; /* Adjust as necessary */
+  right: 16px; /* Adjust as necessary */
+  width: 36px;
+  height: 36px;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.8);
+  border-radius: 50%;
+  padding: 10px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Shadow for depth */
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
-    transform 0.3s;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.3s;
   color: white;
   font-size: 20px;
   cursor: pointer;
 }
-.top-button:hover {
-  filter: brightness(0.8);
+
+#top-button.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out, transform 0.3s; 
 }
-.top-button.active {
-  transform: scale(1.2);
+
+#top-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
 }
-.up {
-  position: relative;
+
+#top-button.active {
+  transform: scale(1.25);
+  transition: transform 0.1s;
+}
+
+#up {
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
   text-align: center;
-  top: 25%;
 }
 
 footer {
@@ -591,6 +622,7 @@ footer {
   text-decoration: none;
   color: white;
 }
+
 .footer-section .footerlink:hover {
   filter: brightness(0.9);
   text-decoration: underline;
@@ -613,6 +645,7 @@ footer {
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+
 .footer-section ul li a img {
   width: 16px;
   margin-right: 5px;
@@ -665,6 +698,7 @@ footer .flogo {
 }
 
 .moviespageheader {
+  width: 100%;
   display: flex;
   flex: 1;
   justify-content: space-between;
@@ -709,8 +743,8 @@ footer .flogo {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .custom-select-arrow {
@@ -720,7 +754,7 @@ footer .flogo {
 .custom-select-options {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 4px;
   position: absolute;
   top: 100%;
   left: 0;
@@ -745,9 +779,11 @@ footer .flogo {
 .custom-select {
   display: none; /* Hide the original select dropdown */
 }
+
 .custom-select-options:not(.hidden) {
   display: block; /* Show when 'hidden' class is not applied */
 }
+
 .movieslist {
   padding: 0;
   width: 100%;
@@ -757,10 +793,8 @@ footer .flogo {
 
 .movieslist {
   display: flex; /* Adjust if you want a different layout */
-  /* Centers the movie list */
   padding-top: 20px;
   padding-bottom: 20px;
-  /* Assuming a dark background */
 }
 
 .movieslistrow {
@@ -772,8 +806,7 @@ footer .flogo {
 }
 
 .movie-banner {
-  flex: 0 0 auto; /* Do not grow or shrink, but be automatically sized by content */
-  width: 280px; /* Assuming 5 items per row, adjust for the gap */
+  flex: 0 0 calc((100% - (5 * 20px)) / 6); 
   margin-bottom: 20px; /* Space at the bottom of each movie-banner */
   position: relative; /* Needed for absolute positioning of children */
   /* Adjust based on your image size */
@@ -786,6 +819,7 @@ footer .flogo {
   position: relative;
   cursor: pointer;
 }
+
 .movie-banner img {
   width: 100%;
   height: auto;
@@ -822,6 +856,7 @@ footer .flogo {
   top: 8px;
   right: 8px;
 }
+
 .movie-banner-img:hover .movie-banner-img-hover {
   display: block;
   pointer-events: all;
@@ -844,20 +879,25 @@ footer .flogo {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .inspectbutton:hover {
   background: rgb(95, 95, 95, 0.5);
 }
+
 .buybutton {
   background: rgb(255, 208, 0);
   color: black;
   bottom: 48px;
 }
+
 .buybutton:hover {
   filter: brightness(0.8);
 }
+
 .textarea a {
   font-size: 30px;
 }
+
 .textarea .active {
   font-weight: bold;
   border-bottom: 2px solid white;
@@ -869,6 +909,7 @@ footer .flogo {
   padding-left: 64px;
   padding-right: 64px;
 }
+
 .movie-info {
   display: flex;
   flex: 1;
@@ -895,6 +936,7 @@ footer .flogo {
   width: fit-content;
   margin-bottom: 52px;
 }
+
 .movie-info-text .movie-title .title-detail {
   display: flex;
   justify-content: space-between;
@@ -908,15 +950,18 @@ footer .flogo {
   line-height: 20px;
   opacity: 0.85;
 }
+
 .movie-info-desc {
   width: 480px;
   opacity: 0.85;
 }
+
 .movie-info-button {
   position: absolute;
   bottom: 4px;
   left: 8px;
 }
+
 .movie-info-button button {
   border: 1px solid rgb(95, 95, 95);
   height: 56px;
@@ -929,6 +974,7 @@ footer .flogo {
   font-weight: bold;
   font-size: 16px;
 }
+
 .movie-info-button button:hover {
   background: rgb(255, 208, 0);
   color: black;
@@ -940,6 +986,7 @@ footer .flogo {
   padding-left: 64px;
   padding-right: 64px;
 }
+
 .buy-ticket-page .movie-info-img img {
   height: auto;
   width: 310px;
@@ -959,6 +1006,7 @@ footer .flogo {
   margin-top: 16px;
   margin-bottom: 32px;
 }
+
 .buy-info-theater-select {
   width: 30%;
   background: rgba(28, 28, 28, 1);
@@ -967,6 +1015,7 @@ footer .flogo {
   border-radius: 10px;
   padding-bottom: 16px;
 }
+
 .buy-info-dateandtime-select {
   width: 30%;
   background: rgba(28, 28, 28, 1);
@@ -976,6 +1025,7 @@ footer .flogo {
   padding-bottom: 16px;
   color: black;
 }
+
 .buy-info-ticket-select {
   width: 30%;
   background: rgba(28, 28, 28, 1);
@@ -986,6 +1036,7 @@ footer .flogo {
   color: black;
   height: fit-content;
 }
+
 .ticket-select-title {
   display: flex;
   justify-content: space-between;
@@ -996,6 +1047,7 @@ footer .flogo {
   color: white;
   height: 38px;
 }
+
 .buy-info-ticket-container {
   border-radius: 10px;
   height: 64px;
@@ -1010,15 +1062,18 @@ footer .flogo {
   text-align: center;
   align-items: center;
 }
+
 .buy-info-ticket-pricing {
   display: flex;
   align-items: center;
   margin-right: 8px;
 }
+
 .buy-info-ticket-count {
   display: flex;
   margin-left: 30px;
 }
+
 .theater-select-header {
   display: flex;
   justify-content: space-between;
@@ -1070,6 +1125,7 @@ footer .flogo {
   float: left;
   margin-right: 24px;
 }
+
 .date-container {
   border-radius: 10px;
   height: 64px;
@@ -1083,10 +1139,12 @@ footer .flogo {
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
 }
+
 /* For Webkit browsers like Chrome and Safari */
 .buy-info-date-select::-webkit-scrollbar {
   display: none;
 }
+
 .buy-info-time-select {
   height: 392px; /* Adjust the height to fit in your design */
   overflow-y: auto; /* Enable vertical scrolling */
@@ -1097,10 +1155,12 @@ footer .flogo {
   padding-left: 24px;
   border-radius: 0;
 }
+
 /* For Webkit browsers like Chrome and Safari */
 .buy-info-time-select::-webkit-scrollbar {
   display: none;
 }
+
 .time-container {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
