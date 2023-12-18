@@ -11,6 +11,23 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+/* This styles the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 85, 85); /* color of the scrollbar itself */
+  border-radius: 6px; /* roundness of the scrollbar */
+  border: 3px solid transparent; /* creates padding around the scrollbar */
+  background-clip: content-box; /* ensures the padding doesn't affect the background color */
+}
+
+/* This styles the scrollbar track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
 a {
   text-decoration: none;
 }
@@ -141,7 +158,6 @@ ul .categories a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(28, 28, 28, 1));
   z-index: 10;
   border-radius: 10px;
@@ -152,12 +168,73 @@ ul .categories a {
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
+
 .login-form {
-  display: flex;
-  background: red;
-  align-items: center;
-  justify-content: left;
+  color: white;
+  text-align: center;
 }
+
+.login-form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+.form-actions {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn-login {
+  width: 40%;
+  height: 36px;
+  border-radius: 30px;
+  transition: 0.15s;
+  background: rgb(54, 54, 54);
+  border: 1px solid rgb(95, 95, 95, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 66px;
+}
+
+.btn-signup {
+  width: 40%;
+  height: 36px;
+  border-radius: 30px;
+  transition: 0.15s;
+  background: rgb(255, 217, 0);
+  border: 1px solid rgb(95, 95, 95, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Hover and focus states for buttons */
+.btn-login:hover, .btn-signup:hover {
+  filter: brightness(0.8);
+}
+
+::placeholder {
+  color: #999;
+}
+
 .body-blur {
   overflow: hidden;
   position: relative;
@@ -180,8 +257,11 @@ ul .categories a {
 }
 
 .close-button {
+  position: absolute;
   color: #8b8b8b;
-  float: right;
+  top: 24px;
+  right: 20px;
+  font-size: 20px; 
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -257,6 +337,7 @@ ul .categories a:hover {
   display: flex;
   justify-content: center;
 }
+
 .manual-btn {
   border: 1px solid rgba(255, 255, 255, 0.603);
   padding: 5px;
@@ -265,6 +346,7 @@ ul .categories a:hover {
   transition: 1s;
   margin-right: 20px;
 }
+
 .manual-btn:hover {
   background: rgba(255, 255, 255, 0.603);
 }
@@ -272,9 +354,11 @@ ul .categories a:hover {
 #radio1:checked ~ .first {
   margin-left: 0;
 }
+
 #radio2:checked ~ .first {
   margin-left: -20%;
 }
+
 #radio3:checked ~ .first {
   margin-left: -40%;
 }
@@ -286,6 +370,7 @@ ul .categories a:hover {
   justify-content: center;
   margin-top: 780px;
 }
+
 .navigation-auto div {
   border: 1px solid rgba(255, 255, 255, 0.603);
   padding: 5px;
@@ -305,17 +390,20 @@ ul .categories a:hover {
 #radio3:checked ~ .navigation-auto .auto-btn3 {
   background: rgba(255, 255, 255, 0.603);
 }
+
 .movietext {
   position: absolute;
   color: white;
   left: 50px;
 }
+
 .movietitle {
   margin-top: 30px;
   font-weight: bold;
   font-size: 28px;
   width: 1000px;
 }
+
 .moviedesc {
   margin-top: 25px;
   margin-bottom: 20px;
@@ -324,9 +412,11 @@ ul .categories a:hover {
   line-height: 30px;
   opacity: 0.75;
 }
+
 .moviedet {
   width: 250px;
 }
+
 .moviedirector {
   font-size: 25px;
   opacity: 0.75;
@@ -352,14 +442,17 @@ ul .categories a:hover {
   text-align: center;
   cursor: pointer;
 }
+
 .movieinspect button:hover {
   background: rgb(255, 208, 0);
   color: black;
 }
+
 .ontheater {
   margin: 20px 50px 50px 40px;
   height: auto;
 }
+
 .carousel-text {
   color: white;
   font-size: 34px;
@@ -582,8 +675,7 @@ ul .categories a:hover {
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
-    transform 0.3s;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.3s;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -674,23 +766,6 @@ footer .flogo {
   display: none;
 }
 
-::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
-}
-
-/* This styles the scrollbar handle */
-::-webkit-scrollbar-thumb {
-  background-color: rgb(85, 85, 85); /* color of the scrollbar itself */
-  border-radius: 6px; /* roundness of the scrollbar */
-  border: 3px solid transparent; /* creates padding around the scrollbar */
-  background-clip: content-box; /* ensures the padding doesn't affect the background color */
-}
-
-/* This styles the scrollbar track */
-::-webkit-scrollbar-track {
-  background: black;
-}
-
 .content-wrapper {
   min-height: calc(
     100vh - 160px
@@ -731,6 +806,7 @@ footer .flogo {
   position: relative;
   text-decoration: none;
 }
+
 .orderarea {
   position: relative;
   width: 200px; /* Adjust width as needed */

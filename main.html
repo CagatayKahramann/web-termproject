@@ -36,24 +36,22 @@
     </div>
     <div class="login_container" id="logincontainer">
       <div class="close-button" id="closebutton">X</div>
-      <div class="login-inputs">
-        <h1>Login</h1>
-        <div class="login-form">
-          <form action="">
-            <table>
-              <tr>
-                <label for="">Username</label>
-              </tr>
-              <tr>
-                <input type="text" placeholder="Username" />
-              </tr>
-              <tr>
-                <label for="">Password</label>
-                <input type="password" placeholder="password" />
-              </tr>
-            </table>
-          </form>
-        </div>
+      <div class="login-form">
+        <form action="" method="post">
+          <h1>Login</h1>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required/>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-login">Log In</button>
+            <a href="buyticket.html"><button type="button" class="btn-signup">Sign Up</button></a>
+          </div>
+        </form>
       </div>
     </div>
     <div class="slide_main">

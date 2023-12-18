@@ -141,6 +141,6 @@ function calculateTotal() {
   let studentPrice = parseInt(ticket_price_student.textContent, 10);
   let standardPrice = parseInt(ticket_price_standard.textContent, 10);
   let total = countStandard * standardPrice + countStudent * studentPrice;
-  total_ticket_price.textContent = `Total Price: ${total.toFixed(2)}tl`;
+  total_ticket_price.textContent = `Total Price: ${total.toFixed(2)}TL`;
 }
 calculateTotal();
