@@ -152,7 +152,12 @@ ul .categories a {
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
-
+.login-form {
+  display: flex;
+  background: red;
+  align-items: center;
+  justify-content: left;
+}
 .body-blur {
   overflow: hidden;
   position: relative;
@@ -348,7 +353,8 @@ ul .categories a:hover {
   cursor: pointer;
 }
 .movieinspect button:hover {
-  background: rgb(95, 95, 95, 0.5);
+  background: rgb(255, 208, 0);
+  color: black;
 }
 .ontheater {
   margin: 20px 50px 50px 40px;
@@ -576,7 +582,8 @@ ul .categories a:hover {
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.3s;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+    transform 0.3s;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -585,7 +592,8 @@ ul .categories a:hover {
 #top-button.show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out, transform 0.3s; 
+  transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out,
+    transform 0.3s;
 }
 
 #top-button:hover {
@@ -806,7 +814,7 @@ footer .flogo {
 }
 
 .movie-banner {
-  flex: 0 0 calc((100% - (5 * 20px)) / 6); 
+  flex: 0 0 calc((100% - (5 * 20px)) / 6);
   margin-bottom: 20px; /* Space at the bottom of each movie-banner */
   position: relative; /* Needed for absolute positioning of children */
   /* Adjust based on your image size */
@@ -1027,7 +1035,7 @@ footer .flogo {
 }
 
 .buy-info-ticket-select {
-  width: 30%;
+  width: 100%;
   background: rgba(28, 28, 28, 1);
   padding: 8px 12px;
   border: 2px solid rgba(0, 0, 0, 0.4);
@@ -1035,6 +1043,15 @@ footer .flogo {
   padding-bottom: 16px;
   color: black;
   height: fit-content;
+}
+.buy-info-ticket-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  width: 30%;
+  height: 476px; /* Same width as your buy-info-ticket-select */
+  position: relative;
+  padding-bottom: 16px; /* Padding bottom to give space for the button */
+  /* Margin bottom to separate from next sections if needed */
 }
 
 .ticket-select-title {
@@ -1216,4 +1233,33 @@ footer .flogo {
   margin: 0 5px; /* Space around the number display */
   border-radius: 10px; /* Slightly rounded corners for the number display */
   user-select: none; /* Prevents the text from being selectable */
+}
+
+.ticket-confirmation {
+  display: flex;
+  align-items: center; /* Align button to the center of the flex container */
+  margin-top: 20px; /* Space between the ticket select section and the button */
+  width: 100%;
+  justify-content: center;
+}
+
+/* Ensure that the button does not stretch full width if that's not desired */
+.ticket-confirmation button {
+  border: 1px solid rgb(95, 95, 95);
+  height: 64px;
+  width: 90%;
+  border-radius: 30px;
+  background: rgb(95, 95, 95, 0.15);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+}
+
+.ticket-confirmation button:hover {
+  background: rgb(255, 208, 0);
+  color: black;
 }

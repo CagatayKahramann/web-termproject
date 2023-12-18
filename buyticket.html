@@ -94,31 +94,31 @@
               </div>
             </div>
             <div class="theater-select">
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
-              <div class="theater-select-container">
+              <div class="theater-select-container" id="theater-selection">
                 <h4>İstanbulası sineması 1</h4>
                 <p>istanbulda bir sinema</p>
               </div>
@@ -129,116 +129,121 @@
               <h3>Choose Date & Time</h3>
             </div>
             <div class="buy-info-date-select">
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
-              <div class="date-container">
+              <div class="date-container" id="date-selection">
                 <h3>13 Aralık</h3>
               </div>
             </div>
             <div class="buy-info-time-select">
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
 
-              <div class="time-container">
+              <div class="time-container" id="time-selection">
                 <h3>10:00</h3>
               </div>
             </div>
           </div>
-          <div class="buy-info-ticket-select">
-            <div class="ticket-select-title">
-              <h3>Choose Ticket</h3>
-              <div class="buy-info-ticket-price">
-                <h3>Total Price: 250.00tl</h3>
+          <div class="buy-info-ticket-wrapper">
+            <div class="buy-info-ticket-select">
+              <div class="ticket-select-title">
+                <h3>Choose Ticket</h3>
+                <div class="buy-info-ticket-price">
+                  <h3 id="ticket-total-price">Total Price: 0.00tl</h3>
+                </div>
+              </div>
+
+              <div class="buy-info-ticket-options">
+                <div class="buy-info-ticket-container">
+                  <h3>Standard</h3>
+                  <div class="buy-info-ticket-pricing">
+                    <h3 id="ticket-price-standard">250.00tl</h3>
+                    <div class="buy-info-ticket-count">
+                      <button
+                        class="buy-info-ticket-count-button"
+                        id="ticket-reduce-count-sta"
+                      >
+                        -
+                      </button>
+                      <h3 id="buy-info-ticket-count-value-sta">0</h3>
+                      <button
+                        class="buy-info-ticket-count-button"
+                        id="ticket-increase-count-sta"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="buy-info-ticket-container">
+                  <h3>Student</h3>
+                  <div class="buy-info-ticket-pricing">
+                    <h3 id="ticket-price-student">200.00tl</h3>
+                    <div class="buy-info-ticket-count">
+                      <button
+                        class="buy-info-ticket-count-button"
+                        id="ticket-reduce-count-stu"
+                      >
+                        -
+                      </button>
+                      <h3 id="buy-info-ticket-count-value-stu">0</h3>
+                      <button
+                        class="buy-info-ticket-count-button"
+                        id="ticket-increase-count-stu"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="buy-info-ticket-options">
-              <div class="buy-info-ticket-container">
-                <h3>Standard</h3>
-                <div class="buy-info-ticket-pricing">
-                  <h3>250.00tl</h3>
-                  <div class="buy-info-ticket-count">
-                    <button
-                      class="buy-info-ticket-count-button"
-                      id="ticket-reduce-count-sta"
-                    >
-                      -
-                    </button>
-                    <h3 id="buy-info-ticket-count-value-sta">0</h3>
-                    <button
-                      class="buy-info-ticket-count-button"
-                      id="ticket-increase-count-sta"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="buy-info-ticket-container">
-                <h3>Student</h3>
-                <div class="buy-info-ticket-pricing">
-                  <h3>200.00tl</h3>
-                  <div class="buy-info-ticket-count">
-                    <button
-                      class="buy-info-ticket-count-button"
-                      id="ticket-reduce-count-stu"
-                    >
-                      -
-                    </button>
-                    <h3 id="buy-info-ticket-count-value-stu">0</h3>
-                    <button
-                      class="buy-info-ticket-count-button"
-                      id="ticket-increase-count-stu"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="ticket-confirmation">
+              <button id="ticket-confirmation-button">Continue</button>
             </div>
           </div>
         </div>
