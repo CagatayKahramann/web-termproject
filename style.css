@@ -1461,40 +1461,40 @@ footer .flogo {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centers vertically */
-  align-items: center;     /* Centers horizontally */
+  align-items: center; /* Centers horizontally */
   min-height: calc(100vh - 222px);
 }
 
-.profile-page{
+.profile-page {
   display: flex;
   flex-direction: column;
   padding-left: 64px;
   padding-right: 64px;
   justify-content: center; /* Centers vertically */
-  align-items: center;     /* Centers horizontally */
+  align-items: center; /* Centers horizontally */
 }
 
-.profile-container{
-  padding-right: 1.5rem!important;
-  padding-left: 1.5rem!important;
-  margin-top: 1.5rem!important;
+.profile-container {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  margin-top: 1.5rem !important;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
 }
 
-.profile-row{
+.profile-row {
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
 }
 
-.profile-picture-column{
+.profile-picture-column {
   flex: 0 0 auto;
   width: auto;
 }
 
-.profile-details-column{
+.profile-details-column {
   flex: 0 0 auto;
   width: 600px;
 }
@@ -1507,8 +1507,8 @@ footer .flogo {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 
 .profile-card-header {
@@ -1521,10 +1521,10 @@ footer .flogo {
 }
 
 .text-center {
-  text-align: center!important;
+  text-align: center !important;
 }
 
-.profile-card-body{
+.profile-card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -1535,10 +1535,10 @@ footer .flogo {
 }
 
 .img-profile-helper {
-  font-size: .875em;
-  color: #6c757d!important;
-  margin-bottom: 1.5rem!important;
-} 
+  font-size: 0.875em;
+  color: #6c757d !important;
+  margin-bottom: 1.5rem !important;
+}
 
 .img-profile-btn {
   width: 192px;
@@ -1559,13 +1559,13 @@ footer .flogo {
   filter: brightness(0.9);
 }
 
-.form-row{
+.form-row {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-.details-profile-btn{
+.details-profile-btn {
   width: 192px;
   height: 32px;
   border-radius: 30px;
@@ -1598,4 +1598,102 @@ footer .flogo {
   appearance: none;
   border-radius: 0.35rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.select-seat-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-left: 400px;
+  padding-right: 408px;
+}
+
+.theater {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Use viewport height to center vertically on the page */
+  background: rgba(28, 28, 28, 1);
+  padding: 8px 12px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.curtain {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align the curtain to the bottom */
+  height: 100px; /* Set a fixed height for the container */
+  margin-bottom: 40px;
+}
+
+.curtain-line {
+  position: absolute;
+  width: 60%; /* Slightly more than 100% for a smoother curve */
+  height: 70%; /* Full height of the container */
+  border-radius: 50%/100px 100px 0 0; /* Top border radius */
+  background-color: #ffffff; /* Color of the curtain */
+  transform: translateY(50%); /* Move it down to create the curve */
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.seats {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.example-seat {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  color: white;
+}
+.example-seat h3 {
+  margin-top: 5px;
+}
+.example-seat .seat {
+  margin-right: 40px;
+}
+.seat {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: #3d9970;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+}
+
+/* You can add more styling to seat classes to represent different states */
+.seat.selected {
+  background-color: #ff851b;
+}
+
+.seat.occupied {
+  background-color: #851414;
+  cursor: default;
+}
+
+.select-seat-confirmation {
+  width: 40%;
+  height: 36px;
+  border-radius: 30px;
+  transition: 0.15s;
+  background: rgb(255, 217, 0);
+  border: 1px solid rgb(95, 95, 95, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+}
+.select-seat-confirmation:hover {
+  filter: brightness(0.8);
 }
