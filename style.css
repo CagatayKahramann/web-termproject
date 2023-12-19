@@ -1139,6 +1139,7 @@ footer .flogo {
   color: black;
   height: fit-content;
 }
+
 .buy-info-ticket-wrapper {
   display: flex;
   flex-direction: column; /* Stack children vertically */
@@ -1227,6 +1228,7 @@ footer .flogo {
   height: 38px;
   color: white;
 }
+
 .buy-info-date-select {
   height: 392px; /* Adjust the height to fit in your design */
   overflow-y: auto; /* Enable vertical scrolling */
@@ -1337,7 +1339,6 @@ footer .flogo {
   justify-content: center;
 }
 
-/* Ensure that the button does not stretch full width if that's not desired */
 .ticket-confirmation a button {
   border: 1px solid rgb(95, 95, 95);
   height: 64px;
@@ -1358,11 +1359,13 @@ footer .flogo {
   background: rgb(255, 208, 0);
   color: black;
 }
+
 .payment-form {
   color: white;
   text-align: left;
   width: 60%;
 }
+
 .payment-page {
   display: flex;
   padding-left: 64px;
@@ -1371,9 +1374,11 @@ footer .flogo {
   align-items: center;
   margin-top: 10%;
 }
+
 .content-wrapper-payment {
   min-height: calc(100vh - 420px);
 }
+
 .credit-card-preview {
   height: 200px;
   justify-content: space-between;
@@ -1381,16 +1386,19 @@ footer .flogo {
   display: flex;
   width: 800px;
 }
+
 .monthandyear {
   display: flex;
   justify-content: space-between;
 }
+
 .credit-card-front-preview img,
 .credit-card-back-preview img {
   border-radius: 10px;
   width: 360px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .credit-card-front-preview,
 .credit-card-back-preview {
   position: relative;
@@ -1402,31 +1410,37 @@ footer .flogo {
   top: 60%;
   left: 11%;
 }
+
 #card-front-text2 {
   position: absolute;
   top: 80%;
   left: 32%;
 }
+
 #card-front-text3 {
   position: absolute;
   top: 95%;
   left: 11%;
 }
+
 #card-back-text {
   position: absolute;
   top: 55%;
   right: 21%;
 }
+
 .month,
 .year,
 .cvv {
   width: 32%;
 }
+
 .payment-form h1 {
   margin-bottom: 20px;
   font-size: 36px;
   color: white;
 }
+
 .btn-confirm-payment {
   width: 40%;
   height: 36px;
@@ -1439,8 +1453,58 @@ footer .flogo {
   cursor: pointer;
 }
 
-/* Hover and focus states for buttons */
-
 .btn-confirm-payment:hover {
   filter: brightness(0.8);
+}
+
+.content-wrapper-profile {
+  min-height: calc(100vh - 270px);
+}
+
+.profile-page{
+  display: flex;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.img-profile {
+  height: 10rem;
+  border-radius: 50% !important;
+}
+
+.profile-card {
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+
+.-profile-card .profile-card-header {
+  font-weight: 500;
+}
+
+.profile-card-header:first-child {
+  border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.profile-card-header {
+  padding: 1rem 1.35rem;
+  margin-bottom: 0;
+  background-color: rgba(33, 40, 50, 0.03);
+  border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+
+.form-control, .dataTable-input {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #69707a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c5ccd6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
