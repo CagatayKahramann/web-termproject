@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopTicket | Payment Information</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/logom.png" type="image/png" />
+    <script src="payment.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="list">
+        <li>
+          <h1>
+            <a href="main.html"
+              ><img src="./images/logom3.png" alt="" class="logo"
+            /></a>
+          </h1>
+        </li>
+        <li class="categories">
+          <a href="ontheaters.html"><h3>MOVIES</h3> </a>
+        </li>
+        <li class="categories">
+          <a href="#"><h3>THEATERS</h3></a>
+        </li>
+      </ul>
+    </div>
+    <div class="content-wrapper-payment">
+      <div class="payment-page">
+        <div class="payment-container">
+          <div class="payment-form" id="payment-form">
+            <form action="" method="post">
+              <h1>Payment Information</h1>
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input
+                  type="text"
+                  id="cardnumber"
+                  placeholder="Card number"
+                  maxlength="16"
+                  oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="monthandyear">
+                  <div class="month">
+                    <label for="month">Month (MM)</label>
+                    <input
+                      type="text"
+                      id="month"
+                      placeholder="MM"
+                      pattern="\d{1,2}"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1'); if (this.value.length > 2) this.value = this.value.slice(0, 2);"
+                      required
+                    />
+                  </div>
+                  <div class="year">
+                    <label for="year">Year (YYYY)</label>
+                    <input
+                      type="text"
+                      id="year"
+                      placeholder="YYYY"
+                      pattern="\d{4}"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1'); if (this.value.length > 4) this.value = this.value.slice(0, 4);"
+                      required
+                    />
+                  </div>
+                  <div class="cvv">
+                    <label for="cvv">CVV</label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      placeholder="CVV"
+                      pattern="\d{3}"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1'); if (this.value.length > 3) this.value = this.value.slice(0, 3);"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nameoncard">Name On Card</label>
+                <input
+                  type="text"
+                  id="cardname"
+                  placeholder="Name on card"
+                  required
+                />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-confirm-payment">
+                  Confirm Payment
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="credit-card-preview">
+          <div class="credit-card-front-preview">
+            <img src="./images/creditcard_front.png" alt="" />
+            <h3 id="card-front-text1">1234 5678 9012 3456</h3>
+            <h3 id="card-front-text2">12/23</h3>
+            <h3 id="card-front-text3">John Doe</h3>
+          </div>
+          <div class="credit-card-back-preview">
+            <img src="./images/creditcard_back.png" alt="" />
+            <h3 id="card-back-text">123</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img src="./images/logom3.png" alt="" class="flogo" />
+      <div class="footer-container">
+        <div class="footer-section">
+          <a href="about.html" class="footerlink"><h3>About Us</h3></a>
+        </div>
+        <div class="footer-section">
+          <a href="contact.html" class="footerlink"><h3>Contact Us</h3></a>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#"></a></li>
+            <li>
+              <a href="#"><img src="./images/fblogo.png" alt="" />Facebook</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/iglogo.png" alt="" />Instagram</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/x.png" alt="" />Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
