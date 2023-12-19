@@ -1368,15 +1368,19 @@ footer .flogo {
 
 .payment-page {
   display: flex;
+  flex-direction: row;
   padding-left: 64px;
   padding-right: 64px;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10%;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
 }
 
 .content-wrapper-payment {
-  min-height: calc(100vh - 420px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  min-height: calc(100vh - 222px);
 }
 
 .credit-card-preview {
